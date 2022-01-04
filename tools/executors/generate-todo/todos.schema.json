@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "cli": "nx",
+  "properties": {
+    "username": {
+      "type": "string",
+      "description": "Username"
+    },
+    "pwd": {
+      "type": "string",
+      "description": "Password to login"
+    },
+    "endpoint": {
+      "type": "string",
+      "description": "Endpoint to get todo's from"
+    }
+  }
+}

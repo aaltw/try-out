@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><rect width="1000" height="1000" rx="200" ry="200" fill="#555555"></rect><g transform="matrix(5.785123966942149,0,0,5.785123966942149,161.96280991735534,346.4090909090909)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="121" height="44"><svg viewBox="0 0 121 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="121" height="44">
+    <path fill="#fff" d="M0 0h121v44H0z"></path>
+  </mask>
+  <g mask="url(#a)">
+    <path d="M30 40h22M3-4l29 49M75-3 46 46M71 40h22M44-5l29 49M118-5 89 44M51 4H29M3 48 32-1" stroke="#fff" stroke-width="9" stroke-linejoin="round"></path>
+    <mask id="b" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="43" y="-3" width="37" height="55">
+      <path d="m47 0 29 49" stroke="#fff" stroke-width="9" stroke-linejoin="round"></path>
+    </mask>
+    <g mask="url(#b)">
+      <path d="m46 34 28-47" stroke="#000" stroke-opacity=".5" stroke-width="3" stroke-linejoin="round"></path>
+    </g>
+    <mask id="c" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-4" y="-12" width="37" height="55">
+      <path d="m0-9 29 49" stroke="#fff" stroke-width="9" stroke-linejoin="round"></path>
+    </mask>
+    <g mask="url(#c)">
+      <path d="m-2 68 28-47" stroke="#000" stroke-opacity=".5" stroke-width="3" stroke-linejoin="round"></path>
+    </g>
+  </g>
+</svg></svg></g></svg>
