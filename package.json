@@ -7,21 +7,20 @@
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test",
+    "lint": "nx lint",
     "generate-icons": "svg-generator"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^13.0.0",
-    "@angular/common": "^13.0.0",
-    "@angular/compiler": "^13.0.0",
-    "@angular/core": "^13.0.0",
-    "@angular/forms": "^13.0.0",
-    "@angular/platform-browser": "^13.0.0",
-    "@angular/platform-browser-dynamic": "^13.0.0",
-    "@angular/router": "^13.0.0",
-    "@ngneat/svg-icon": "^4.0.2",
-    "@nrwl/angular": "13.3.12",
+    "@angular/animations": "13.1.1",
+    "@angular/common": "13.1.1",
+    "@angular/compiler": "13.1.1",
+    "@angular/core": "13.1.1",
+    "@angular/forms": "13.1.1",
+    "@angular/platform-browser": "13.1.1",
+    "@angular/platform-browser-dynamic": "13.1.1",
+    "@angular/router": "13.1.1",
+    "@nrwl/angular": "13.4.3",
     "autoprefixer": "^10.4.1",
     "postcss": "^8.4.5",
     "rxjs": "~7.5.1",
@@ -38,6 +37,7 @@
     "@angular/compiler-cli": "^13.0.0",
     "@angular/language-service": "^13.0.0",
     "@ngneat/svg-generator": "^3.2.1",
+    "@ngneat/svg-icon": "^4.0.2",
     "@nrwl/cli": "13.3.12",
     "@nrwl/cypress": "13.3.12",
     "@nrwl/eslint-plugin-nx": "13.3.12",
@@ -58,7 +58,7 @@
     "node-fetch": "^2.6.6",
     "prettier": "^2.5.1",
     "ts-jest": "27.1.2",
-    "typescript": "~4.4.3"
+    "typescript": "4.5.4"
   },
   "svgGenerator": {
     "outputPath": "apps/app/src/app/svg",
@@ -72,3 +72,4 @@
     }
   }
 }
+
