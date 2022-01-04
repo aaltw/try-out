@@ -1,6 +1,6 @@
 version: 2
 updates:
-  # Configuration for npm
+  # Maintain dependencies for npm
   - package-ecosystem: 'npm'
     directory: .
     schedule:
@@ -24,8 +24,8 @@ updates:
         # For @angular packages, ignore all new major version > 12
         versions: ['>=4.2.x']
 
-  # Configuration for github-actions
-  - package-ecosystem: 'github-actions'
-      directory: .
-      schedule:
-        interval: 'daily'
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
