@@ -12,15 +12,15 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^13.0.0",
-    "@angular/common": "^13.0.0",
-    "@angular/compiler": "^13.0.0",
-    "@angular/core": "^13.0.0",
-    "@angular/forms": "^13.0.0",
-    "@angular/platform-browser": "^13.0.0",
-    "@angular/platform-browser-dynamic": "^13.0.0",
-    "@angular/router": "^13.0.0",
-    "@nrwl/angular": "13.3.12",
+    "@angular/animations": "13.1.1",
+    "@angular/common": "13.1.1",
+    "@angular/compiler": "13.1.1",
+    "@angular/core": "13.1.1",
+    "@angular/forms": "13.1.1",
+    "@angular/platform-browser": "13.1.1",
+    "@angular/platform-browser-dynamic": "13.1.1",
+    "@angular/router": "13.1.1",
+    "@nrwl/angular": "13.4.3",
     "autoprefixer": "^10.4.1",
     "postcss": "^8.4.5",
     "rxjs": "~7.5.1",
@@ -29,22 +29,22 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.0.0",
+    "@angular-devkit/build-angular": "13.1.2",
     "@angular-eslint/eslint-plugin": "13.0.1",
     "@angular-eslint/eslint-plugin-template": "13.0.1",
     "@angular-eslint/template-parser": "13.0.1",
-    "@angular/cli": "~13.0.0",
-    "@angular/compiler-cli": "^13.0.0",
-    "@angular/language-service": "^13.0.0",
+    "@angular/cli": "13.1.2",
+    "@angular/compiler-cli": "13.1.1",
+    "@angular/language-service": "13.1.1",
     "@ngneat/svg-generator": "^3.2.1",
     "@ngneat/svg-icon": "^4.0.2",
-    "@nrwl/cli": "13.3.12",
-    "@nrwl/cypress": "13.3.12",
-    "@nrwl/eslint-plugin-nx": "13.3.12",
-    "@nrwl/jest": "13.3.12",
-    "@nrwl/linter": "13.3.12",
-    "@nrwl/tao": "13.3.12",
-    "@nrwl/workspace": "13.3.12",
+    "@nrwl/cli": "13.4.3",
+    "@nrwl/cypress": "13.4.3",
+    "@nrwl/eslint-plugin-nx": "13.4.3",
+    "@nrwl/jest": "13.4.3",
+    "@nrwl/linter": "13.4.3",
+    "@nrwl/tao": "13.4.3",
+    "@nrwl/workspace": "13.4.3",
     "@types/jest": "27.0.2",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "5.3.1",
@@ -58,7 +58,7 @@
     "node-fetch": "^2.6.6",
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",
-    "typescript": "~4.4.3"
+    "typescript": "4.5.4"
   },
   "svgGenerator": {
     "outputPath": "apps/app/src/app/svg",
@@ -72,3 +72,4 @@
     }
   }
 }
+
