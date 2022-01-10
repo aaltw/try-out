@@ -22,10 +22,10 @@ jobs:
       uses: sand4rt/ftp-deployer@v1.3
       with:
         sftp: true
-        host: ${{ secrets.FTP_SERVER }} # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+        host: ${{ secrets.FTP_SERVER }}
         port: 22
-        username: ${{ secrets.FTP_USERNAME }} # FTP username
-        password: ${{ secrets.FTP_PASSWORD }} # FTP password
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         remote_folder: ./subdomains/try-out/
         local_folder: dist
         cleanup: true
