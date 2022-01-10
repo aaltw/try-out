@@ -19,9 +19,10 @@ jobs:
       - uses: actions/setup-node@v2.5.1
         with:
           node-version: '14'
-      - run: npm install
+      - run: npm ci
       - run: npx nx affected --target=build --parallel --max-parallel=3
       - run: npx nx affected --target=test --parallel --max-parallel=2
+
   pr:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'pull_request' }}
@@ -35,6 +36,6 @@ jobs:
       - uses: actions/setup-node@v2.5.1
         with:
           node-version: '14'
-      - run: npm install
+      - run: npm ci
       - run: npx nx affected --target=build --parallel --max-parallel=3
       - run: npx nx affected --target=test --parallel --max-parallel=2
