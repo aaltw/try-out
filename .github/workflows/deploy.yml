@@ -19,12 +19,15 @@ jobs:
         npx nx build
 
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      uses: sand4rt/ftp-deployer@v1.3
       with:
-        server: ${{ secrets.ftp_server }}
-        username:  ${{ secrets.ftp_username }}
-        password: ${{ secrets.ftp_password }}
-        protocol: ftps
-        port: 1234
-        local-dir: ./dist/
-        server-dir: ./subdomains/try-out/
+        sftp: true
+        host: ${{ secrets.FTP_SERVER }} # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+        port: 22
+        username: ${{ secrets.FTP_USERNAME }} # FTP username
+        password: ${{ secrets.FTP_PASSWORD }} # FTP password
+        remote_folder: ./subdomains/try-out/
+        local_folder: dist
+        cleanup: true
+        include: []
+        exclude: []
