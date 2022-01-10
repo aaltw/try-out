@@ -29,5 +29,3 @@ jobs:
         remote_folder: ./subdomains/try-out/
         local_folder: dist
         cleanup: true
-        include: []
-        exclude: []
