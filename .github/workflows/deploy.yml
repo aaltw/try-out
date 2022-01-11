@@ -29,5 +29,8 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         remote_folder: ./subdomains/try-out/
         local_folder: dist/apps/app/
-        include: ["*", "**/*", "dist/apps/app/.htaccess"]
+        include:
+          - "*"
+          - "**/*"
+          - "dist/apps/app/.htaccess"
         cleanup: true
