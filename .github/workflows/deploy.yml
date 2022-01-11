@@ -16,7 +16,7 @@ jobs:
     - name: 🔨 Build Project
       run: |
         npm ci
-        pnx nx run app:generate-todo --username=${{ secrets.CMS_USERNAME }} --pwd=${{ secrets.CMS_PASSWORD }} --endpoint=${{ secrets.CMS_ENDPOINT }}
+        npx nx run app:generate-todo --username=${{ secrets.CMS_USERNAME }} --pwd=${{ secrets.CMS_PASSWORD }} --endpoint=${{ secrets.CMS_ENDPOINT }}
         npx nx build
 
     - name: 📂 Sync files
