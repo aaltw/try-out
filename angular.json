@@ -16,7 +16,15 @@
             "main": "apps/app/src/main.ts",
             "polyfills": "apps/app/src/polyfills.ts",
             "tsConfig": "apps/app/tsconfig.app.json",
-            "assets": ["apps/app/src/favicon.ico", "apps/app/src/assets"],
+            "assets": [
+              "apps/app/src/favicon.ico",
+              "apps/app/src/assets",
+              {
+                "glob": ".htaccess",
+                "input": "apps/app/src/",
+                "output": "/"
+              }
+            ],
             "styles": ["apps/app/src/styles.css"],
             "scripts": []
           },
