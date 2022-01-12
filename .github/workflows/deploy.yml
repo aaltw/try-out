@@ -30,7 +30,7 @@ jobs:
         remote_folder: ./subdomains/try-out/
         local_folder: dist/apps/app/
         include:  |
-          *
-          **/*
-          dist/apps/app/.htaccess
+          "*"
+          "**/*"
+          "dist/apps/app/.htaccess"
         cleanup: true
