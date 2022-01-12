@@ -31,6 +31,6 @@ jobs:
         local_folder: dist/apps/app/
         include:  |
           "*"
-          "**/*"
-          "dist/apps/app/.htaccess"
+          , "**/*"
+          , "dist/apps/app/.htaccess"
         cleanup: true
