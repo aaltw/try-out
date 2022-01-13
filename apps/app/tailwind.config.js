@@ -1,9 +1,10 @@
+const { createGlobPatternsForDependencies } = require('@nrwl/angular/tailwind');
+const { join } = require('path');
 
 module.exports = {
-  mode: 'jit',
   content: [
-    // Example content paths...
-    './apps/app/**/*.{ts,html}',
+    join(__dirname, 'src/**/*.{html,ts}'),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
   darkMode: 'class',
   theme: {
@@ -84,4 +85,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+};
