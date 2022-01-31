@@ -18,6 +18,8 @@ import { ShadowComponent } from './pages/shadow/shadow.component';
 import { SkeletonComponent } from './pages/skeleton/skeleton.component';
 import { TodoComponent } from './pages/todo/todo.component';
 import { ImageShadowComponent } from './pages/image-shadow/image-shadow.component';
+import { SunsetComponent } from './pages/sunset/sunset.component';
+import { GlareComponent } from './pages/glare/glare.component';
 
 
 const PAGES = [
@@ -30,7 +32,9 @@ const PAGES = [
   ShadowComponent,
   SkeletonComponent,
   TodoComponent,
-  ImageReflectionComponent
+  ImageReflectionComponent,
+  ImageShadowComponent,
+  SunsetComponent
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -69,6 +73,14 @@ const appRoutes: Routes = [
     component: ImageShadowComponent,
   },
   {
+    path: 'sunset',
+    component: SunsetComponent,
+  },
+  {
+    path: 'glare',
+    component: GlareComponent,
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'todo',
@@ -82,7 +94,7 @@ const appRoutes: Routes = [
     AppComponent,
     ...PAGES,
     ...COMPONENTS,
-    ImageShadowComponent
+    GlareComponent,
   ],
   imports: [
     BrowserModule,

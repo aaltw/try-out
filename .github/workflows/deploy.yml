@@ -1,0 +1,33 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: 🔨 Build Project
+      run: |
+        npm ci
+        npx nx run app:generate-todo --username=${{ secrets.CMS_USERNAME }} --pwd=${{ secrets.CMS_PASSWORD }} --endpoint=${{ secrets.CMS_ENDPOINT }}
+        npx nx build
+
+    - name: 📂 Sync files
+      uses: sand4rt/ftp-deployer@v1.3
+      with:
+        sftp: true
+        host: ${{ secrets.FTP_SERVER }}
+        port: 22
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        remote_folder: ./subdomains/try-out/
+        local_folder: dist/apps/app/
+        include: '["*", "**/*", ".htaccess"]'
+        cleanup: true

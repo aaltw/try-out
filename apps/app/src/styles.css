@@ -4,18 +4,26 @@
 
 @layer utilities {
   .text-shadow-neon {
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+      0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   }
 
   .drop-shadow-neon-purple {
-    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 16px rgba(255, 255, 255, 0.7))  drop-shadow(0 0 24px rgba(176, 38, 255, 1)) drop-shadow(0 0 36px rgba(176, 38, 255, 1)) drop-shadow(0 0 48px rgba(176, 38, 255, 1));
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 8px rgba(255, 255, 255, 0.5))
+      drop-shadow(0 0 16px rgba(255, 255, 255, 0.7))
+      drop-shadow(0 0 24px rgba(176, 38, 255, 1))
+      drop-shadow(0 0 36px rgba(176, 38, 255, 1))
+      drop-shadow(0 0 48px rgba(176, 38, 255, 1));
+  }
+
+  .thing {
+    width: 100px;
+    height: 100px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 64 64' width='64' height='64' preserveAspectRatio='none' fill='white'><path d='M0 0 L0 64 L64 64 C64 40 0 56 0 32 C0 8 64 24 64 0 Z' /></svg>")
+        top right/60px 100px,
+      linear-gradient(#fff, #fff) bottom/100% calc(100% - 100px),
+      linear-gradient(#fff, #fff) left / calc(100% - 60px) 100%;
+    background-repeat: no-repeat;
   }
 }
