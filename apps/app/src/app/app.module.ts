@@ -20,6 +20,7 @@ import { TodoComponent } from './pages/todo/todo.component';
 import { ImageShadowComponent } from './pages/image-shadow/image-shadow.component';
 import { SunsetComponent } from './pages/sunset/sunset.component';
 import { GlareComponent } from './pages/glare/glare.component';
+import { CircleComponent } from './pages/circle/circle.component';
 
 
 const PAGES = [
@@ -34,7 +35,9 @@ const PAGES = [
   TodoComponent,
   ImageReflectionComponent,
   ImageShadowComponent,
-  SunsetComponent
+  SunsetComponent,
+  GlareComponent,
+  CircleComponent,
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -81,6 +84,10 @@ const appRoutes: Routes = [
     component: GlareComponent,
   },
   {
+    path: 'circle',
+    component: CircleComponent,
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'todo',
@@ -93,8 +100,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ...PAGES,
-    ...COMPONENTS,
-    GlareComponent,
+    ...COMPONENTS
   ],
   imports: [
     BrowserModule,
