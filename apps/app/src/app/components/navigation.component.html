@@ -1,11 +1,11 @@
 <a
   routerLink="/todo"
   routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-  class="flex items-center px-2 py-2 mb-4 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
+  class="group mb-4 flex items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-200 hover:text-slate-800 dark:text-white/70 dark:hover:bg-white/5 dark:hover:text-white/60"
 >
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    class="w-6 h-6"
+    class="h-6 w-6"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -23,17 +23,15 @@
   </div>
 </a>
 
+<!-- All kinds of stuff -->
 <try-out-spy-collapsible-navigation [expanded]="true">
-  <ng-container slot="start">Group Title A</ng-container>
+  <ng-container slot="start">Stuffs 'n things</ng-container>
 
-  <a
-    routerLink="/neon"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50"
-    class="flex items-center px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
+  <try-out-spy-navigation-item label="Neon" link="/neon">
     <svg
+      slot="icon"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-6 h-6"
+      class="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -45,18 +43,13 @@
         d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
       />
     </svg>
+  </try-out-spy-navigation-item>
 
-    <span>Neon</span>
-  </a>
-
-  <a
-    routerLink="/skeleton"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
+  <try-out-spy-navigation-item label="Skeleton" link="/skeleton">
     <svg
+      slot="icon"
       xmlns="http://www.w3.org/2000/svg"
-      class="w-6 h-6"
+      class="h-6 w-6"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -68,75 +61,50 @@
         d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
       />
     </svg>
+  </try-out-spy-navigation-item>
 
-    <span>Skeleton</span>
-  </a>
-</try-out-spy-collapsible-navigation>
+  <try-out-spy-navigation-item
+    label="Shadow"
+    link="/shadow"
+  ></try-out-spy-navigation-item>
 
-<try-out-spy-collapsible-navigation [expanded]="true">
-  <ng-container slot="start">Group Title B</ng-container>
+  <try-out-spy-navigation-item
+    label="Glare"
+    link="/glare"
+  ></try-out-spy-navigation-item>
 
-  <a
-    routerLink="/shadow"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
-    <span>Shadow</span>
-  </a>
-  <a
-    routerLink="/glare"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
-    <span>Glare</span>
-  </a>
+  <try-out-spy-navigation-item
+    label="Circles"
+    link="/circle"
+  ></try-out-spy-navigation-item>
 
-  <a
-    routerLink="/circle"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
-    <span>Circles</span>
-  </a>
+  <try-out-spy-navigation-item
+    label="Browser"
+    link="/browser"
+  ></try-out-spy-navigation-item>
+
+  <try-out-spy-navigation-item
+    label="Gradient-hover"
+    link="/gradient-hover"
+  ></try-out-spy-navigation-item>
 </try-out-spy-collapsible-navigation>
 
 <!-- Glowie stuff -->
-<try-out-spy-collapsible-navigation [expanded]="true">
+<try-out-spy-collapsible-navigation [expanded]="false">
   <ng-container slot="start">Glow</ng-container>
-  <a
-    routerLink="/button-glow"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center w-full px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400 group"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="w-6 h-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-      />
-    </svg>
-    <span>Button</span>
-  </a>
-
-  <a
-    routerLink="/sunset"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="flex items-center w-full px-2 py-2 space-x-3 text-sm font-medium transition-colors rounded-md group text-slate-600 hover:bg-slate-200 hover:text-slate-800 dark:hover:bg-slate-700 dark:hover:text-slate-300 dark:text-slate-400"
-  >
-    <span class="w-6 h-6 rounded-full bg-gradient-to-tr from-orange-500 to-orange-600 group-hover:blur-[2px]"></span>
-    <span>Sunset</span>
-  </a>
+  <try-out-spy-navigation-item label="Button" link="/button-glow">
+    <svg-icon key="photograph" slot="icon"></svg-icon>
+  </try-out-spy-navigation-item>
+  <try-out-spy-navigation-item label="Sunset" link="/sunset">
+    <div
+      slot="icon"
+      class="h-6 w-6 rounded-full bg-gradient-to-tr from-orange-500 to-orange-600 group-hover:blur-[2px]"
+    ></div>
+  </try-out-spy-navigation-item>
 </try-out-spy-collapsible-navigation>
 
 <!-- Image stuff -->
-<try-out-spy-collapsible-navigation [expanded]="true">
+<try-out-spy-collapsible-navigation [expanded]="false">
   <ng-container slot="start">Images</ng-container>
   <try-out-spy-navigation-item
     label="Reflection is perfection"
@@ -144,10 +112,7 @@
   >
     <svg-icon key="photograph" slot="icon"></svg-icon>
   </try-out-spy-navigation-item>
-  <try-out-spy-navigation-item
-    label="Image shadow"
-    link="/image-shadow"
-  >
+  <try-out-spy-navigation-item label="Image shadow" link="/image-shadow">
     <svg-icon key="photograph" slot="icon"></svg-icon>
   </try-out-spy-navigation-item>
 </try-out-spy-collapsible-navigation>
