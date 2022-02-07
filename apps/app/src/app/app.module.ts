@@ -21,23 +21,26 @@ import { ImageShadowComponent } from './pages/image-shadow/image-shadow.componen
 import { SunsetComponent } from './pages/sunset/sunset.component';
 import { GlareComponent } from './pages/glare/glare.component';
 import { CircleComponent } from './pages/circle/circle.component';
-
+import { BrowserComponent } from './pages/browser/browser.component';
+import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
 
 const PAGES = [
   BackgroundGlowComponent,
+  BrowserComponent,
   ButtonGlowComponent,
+  CircleComponent,
   CollapsibleNavigationComponent,
+  GlareComponent,
+  GradientHoverComponent,
+  ImageReflectionComponent,
+  ImageShadowComponent,
   NavigationComponent,
   NavigationItemComponent,
   NeonComponent,
   ShadowComponent,
   SkeletonComponent,
-  TodoComponent,
-  ImageReflectionComponent,
-  ImageShadowComponent,
   SunsetComponent,
-  GlareComponent,
-  CircleComponent,
+  TodoComponent,
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -88,24 +91,28 @@ const appRoutes: Routes = [
     component: CircleComponent,
   },
   {
+    path: 'browser',
+    component: BrowserComponent,
+  },
+  {
+    path: 'gradient-hover',
+    component: GradientHoverComponent,
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'todo',
   },
 ];
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    ...PAGES,
-    ...COMPONENTS
-  ],
+  declarations: [AppComponent, ...PAGES, ...COMPONENTS],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    SvgIconsModule.forRoot({ icons: [appDownloadIcon, appPhotographIcon, appSunIcon] }),
+    SvgIconsModule.forRoot({
+      icons: [appDownloadIcon, appPhotographIcon, appSunIcon],
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
