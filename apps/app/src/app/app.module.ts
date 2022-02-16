@@ -23,6 +23,7 @@ import { GlareComponent } from './pages/glare/glare.component';
 import { CircleComponent } from './pages/circle/circle.component';
 import { BrowserComponent } from './pages/browser/browser.component';
 import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
+import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -41,6 +42,7 @@ const PAGES = [
   SkeletonComponent,
   SunsetComponent,
   TodoComponent,
+  NeumorphicComponent,
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -97,6 +99,10 @@ const appRoutes: Routes = [
   {
     path: 'gradient-hover',
     component: GradientHoverComponent,
+  },
+  {
+    path: 'neumorphic',
+    component: NeumorphicComponent,
   },
   {
     path: '',

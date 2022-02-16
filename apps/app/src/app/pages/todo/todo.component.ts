@@ -15,28 +15,28 @@ export interface ApiTodoTask {
 }
 @Component({
   template: `
-    <div class="flex flex-col h-screen relative">
-      <div class="fixed w-full z-10 border-b-slate-200/50 border-b">
+    <div class="relative flex h-screen flex-col">
+      <div class="fixed z-10 w-full border-b border-b-slate-200/50">
         <try-out-spy-content-header>TodoComponent</try-out-spy-content-header>
       </div>
 
       <div class="flex-1 overflow-auto pt-16">
         <ul class="p-4">
           <li
-            class="font-bold uppercase text-sm py-4 px-6 pl-0 text-slate-700 dark:text-slate-400 "
+            class="py-4 px-6 pl-0 text-sm font-bold uppercase text-slate-700 dark:text-slate-400 "
           >
             Todo
           </li>
           <li
-            class="backdrop-blur-md dark:bg-slate-700/30 dark:text-slate-200 transition rounded-lg py-4 px-6 mt-4 shadow-slate-800 hover:shadow-slate-600 shadow-md"
+            class="mt-4 rounded-lg py-4 px-6 shadow-md shadow-slate-800 backdrop-blur-md transition hover:shadow-slate-600 dark:bg-slate-700/30 dark:text-slate-200"
           >
             item NEW!
           </li>
 
           <li
-            class="backdrop-blur-md dark:bg-slate-700 dark:text-slate-200 dark:bg-opacity-30 transition rounded-lg py-4 px-6 mt-4 dark:hover:bg-opacity-[.25] flex justify-between"
+            class="mt-4 flex justify-between rounded-lg py-4 px-6 backdrop-blur-md transition dark:bg-slate-700 dark:bg-opacity-30 dark:text-slate-200 dark:hover:bg-opacity-[.25]"
             [ngClass]="{
-              'line-through decoration-pink-500 opacity-40 pointer-events-none':
+              'pointer-events-none line-through decoration-pink-500 opacity-40':
                 item.done
             }"
             *ngFor="let item of list"
@@ -52,12 +52,12 @@ export interface ApiTodoTask {
           </li>
 
           <li
-            class="font-bold uppercase text-sm py-4 px-6 pl-0 mt-4 text-slate-700 dark:text-slate-400"
+            class="mt-4 py-4 px-6 pl-0 text-sm font-bold uppercase text-slate-700 dark:text-slate-400"
           >
             Visit
           </li>
           <li
-            class="decoration- backdrop-blur-md dark:bg-slate-700 dark:text-slate-200 dark:bg-opacity-30 transition rounded-lg py-4 px-6 dark:hover:bg-opacity-[.25] mt-4"
+            class="decoration- mt-4 rounded-lg py-4 px-6 backdrop-blur-md transition dark:bg-slate-700 dark:bg-opacity-30 dark:text-slate-200 dark:hover:bg-opacity-[.25]"
             *ngFor="let item of sites"
             [innerHTML]="item"
           ></li>
@@ -129,7 +129,6 @@ export class TodoComponent {
   }
 
   async #fromApi(): Promise<void> {
-
     // Return a Promise with TodoTask[] using the token
     this.#list = await fetch('assets/todos.json', {
       method: 'GET',
