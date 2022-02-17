@@ -1,0 +1,30 @@
+<div class="flex h-screen items-center justify-center">
+  <div
+    class="flex flex-row items-center space-x-4 text-3xl font-light text-slate-300"
+  >
+    <div>{{ a$ | async }}</div>
+    <div class="">&times;</div>
+    <div>{{ b$ | async }}</div>
+    <div>=</div>
+    <div class="">
+      <input
+        class="focus:shadow-outline w-full appearance-none rounded border border-white/40 bg-black/30 py-2 px-3 leading-tight text-slate-300 shadow focus:outline-none"
+        id="answer"
+        type="text"
+        (keyup.enter)="check($event)"
+      />
+    </div>
+    <div class="" *ngIf="{ value: result$ | async } as result">
+      <div
+        *ngIf="result.value"
+        class="flex flex-col text-left text-emerald-600"
+      >
+        Correct
+        <span class="text-sm text-emerald-600"
+          >Refresh in {{ refreshSeconds$ | async }}s</span
+        >
+      </div>
+      <div *ngIf="result.value === false" class="text-red-800">Incorrect</div>
+    </div>
+  </div>
+</div>
