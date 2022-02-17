@@ -24,6 +24,7 @@ import { CircleComponent } from './pages/circle/circle.component';
 import { BrowserComponent } from './pages/browser/browser.component';
 import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
 import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
+import { MultiplicationComponent } from './pages/multiplication/multiplication.component';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -43,6 +44,7 @@ const PAGES = [
   SunsetComponent,
   TodoComponent,
   NeumorphicComponent,
+  MultiplicationComponent,
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -103,6 +105,10 @@ const appRoutes: Routes = [
   {
     path: 'neumorphic',
     component: NeumorphicComponent,
+  },
+  {
+    path: 'multiplication',
+    component: MultiplicationComponent,
   },
   {
     path: '',
