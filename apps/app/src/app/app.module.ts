@@ -20,21 +20,31 @@ import { TodoComponent } from './pages/todo/todo.component';
 import { ImageShadowComponent } from './pages/image-shadow/image-shadow.component';
 import { SunsetComponent } from './pages/sunset/sunset.component';
 import { GlareComponent } from './pages/glare/glare.component';
-
+import { CircleComponent } from './pages/circle/circle.component';
+import { BrowserComponent } from './pages/browser/browser.component';
+import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
+import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
+import { MultiplicationComponent } from './pages/multiplication/multiplication.component';
 
 const PAGES = [
   BackgroundGlowComponent,
+  BrowserComponent,
   ButtonGlowComponent,
+  CircleComponent,
   CollapsibleNavigationComponent,
+  GlareComponent,
+  GradientHoverComponent,
+  ImageReflectionComponent,
+  ImageShadowComponent,
   NavigationComponent,
   NavigationItemComponent,
   NeonComponent,
   ShadowComponent,
   SkeletonComponent,
+  SunsetComponent,
   TodoComponent,
-  ImageReflectionComponent,
-  ImageShadowComponent,
-  SunsetComponent
+  NeumorphicComponent,
+  MultiplicationComponent,
 ];
 
 const COMPONENTS = [ContentHeaderComponent];
@@ -81,25 +91,40 @@ const appRoutes: Routes = [
     component: GlareComponent,
   },
   {
+    path: 'circle',
+    component: CircleComponent,
+  },
+  {
+    path: 'browser',
+    component: BrowserComponent,
+  },
+  {
+    path: 'gradient-hover',
+    component: GradientHoverComponent,
+  },
+  {
+    path: 'neumorphic',
+    component: NeumorphicComponent,
+  },
+  {
+    path: 'multiplication',
+    component: MultiplicationComponent,
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'todo',
   },
 ];
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    ...PAGES,
-    ...COMPONENTS,
-    GlareComponent,
-  ],
+  declarations: [AppComponent, ...PAGES, ...COMPONENTS],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    SvgIconsModule.forRoot({ icons: [appDownloadIcon, appPhotographIcon, appSunIcon] }),
+    SvgIconsModule.forRoot({
+      icons: [appDownloadIcon, appPhotographIcon, appSunIcon],
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

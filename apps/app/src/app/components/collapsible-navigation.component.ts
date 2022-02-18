@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'try-out-spy-collapsible-navigation',
   template: `
-    <div class="pt-4 pb-4 border-t border-slate-700/60">
+    <div class="border-t border-white/5  pt-4 pb-4">
       <div
-        class="flex justify-between items-center px-3 cursor-pointer text-slate-400 hover:text-slate-50"
+        class="flex cursor-pointer items-center justify-between px-3 text-slate-400 hover:text-slate-50"
         (click)="expanded = !expanded"
       >
-        <span class="flex text-sm uppercase py-4">
+        <span class="flex py-4 text-sm uppercase">
           <ng-content select="[slot=start]"></ng-content>
         </span>
         <span
@@ -33,13 +33,13 @@ import { Component, Input } from '@angular/core';
       </div>
 
       <div
-        class="overflow-hidden opacity-50 duration-300 pointer-events-none -translate-y-2 max-h-0 transition-[opacity,transform]"
+        class="pointer-events-none max-h-0 -translate-y-2 overflow-hidden opacity-50 transition-[opacity,transform] duration-300 "
         [ngClass]="{
-          'max-h-96 opacity-100 duration-150 !translate-y-0 pointer-events-auto':
+          'pointer-events-auto max-h-96 !translate-y-0 opacity-100 duration-150':
             expanded
         }"
       >
-        <div class="pt-4 space-y-4">
+        <div class="flex flex-col space-y-2 pt-4">
           <ng-content></ng-content>
         </div>
       </div>
