@@ -9,8 +9,7 @@
     "build": "nx build",
     "lint": "nx lint",
     "generate-icons": "svg-generator",
-    "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "prepare": "husky install"
   },
   "private": true,
   "dependencies": {

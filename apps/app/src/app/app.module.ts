@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { appDownloadIcon } from '@app/svg/download';
-import { appPhotographIcon } from '@app/svg/photograph';
-import { appSunIcon } from '@app/svg/sun';
+import { appDownloadIcon } from './svg/download';
+import { appPhotographIcon } from './svg/photograph';
+import { appSunIcon } from './svg/sun';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import { AppComponent } from './app.component';
 import { CollapsibleNavigationComponent } from './components/collapsible-navigation.component';

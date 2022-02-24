@@ -1,6 +1,3 @@
-"lint-staged": {
-   "{apps,libs}/**/*.{ts,tsx,json,md,scss,html}": [
-     "nx format:write --base main",
-     "npm run affected:lint -- --base main"
-   ]
- }
+{
+  "*": ["nx affected:lint --fix --files", "nx format:write --files"]
+}
