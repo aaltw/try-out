@@ -101,6 +101,57 @@
         }
       },
       "tags": []
+    },
+    "my_rust_app": {
+      "root": "apps/my-rust-app",
+      "projectType": "application",
+      "sourceRoot": "apps/my-rust-app/src",
+      "architect": {
+        "build": {
+          "builder": "@nxrs/cargo:build",
+          "options": {
+            "release": false
+          },
+          "configurations": {
+            "production": {
+              "release": true
+            }
+          }
+        },
+        "test": {
+          "builder": "@nxrs/cargo:test",
+          "options": {}
+        },
+        "lint": {
+          "builder": "@nxrs/cargo:clippy",
+          "options": {
+            "fix": false,
+            "failOnWarnings": true,
+            "noDeps": true
+          }
+        }
+      },
+      "tags": []
+    },
+    "my_rust_lib": {
+      "root": "libs/my-rust-lib",
+      "projectType": "library",
+      "sourceRoot": "libs/my-rust-lib/src",
+      "architect": {
+        "test": {
+          "builder": "@nxrs/cargo:test",
+          "options": {}
+        },
+        "lint": {
+          "builder": "@nxrs/cargo:clippy",
+          "options": {
+            "fix": false,
+            "failOnWarnings": true,
+            "noDeps": true
+          }
+        }
+      },
+      "tags": []
     }
   }
 }

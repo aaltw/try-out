@@ -47,5 +47,6 @@
       "skipTests": true
     }
   },
-  "defaultProject": "app"
+  "defaultProject": "app",
+  "plugins": ["@nxrs/cargo"]
 }
