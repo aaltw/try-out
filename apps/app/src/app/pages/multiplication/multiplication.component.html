@@ -3,14 +3,15 @@
     class="flex flex-row items-center space-x-4 text-3xl font-light text-slate-300"
   >
     <div>{{ a$ | async }}</div>
-    <div class="">&times;</div>
+    <div>&times;</div>
     <div>{{ b$ | async }}</div>
     <div>=</div>
-    <div class="">
+    <div>
       <input
         class="focus:shadow-outline w-full appearance-none rounded border border-white/40 bg-black/30 py-2 px-3 leading-tight text-slate-300 shadow focus:outline-none"
         id="answer"
         type="text"
+        autocomplete="off"
         (keyup.enter)="check($event)"
       />
     </div>
