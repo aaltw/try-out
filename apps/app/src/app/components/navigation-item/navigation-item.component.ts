@@ -24,7 +24,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
       <span class="h-6 w-6 "
         ><ng-content select="[slot=icon]"></ng-content
       ></span>
-      <span>{{ label }}</span>
+      <span *ngIf="label">{{ label }}</span>
+      <ng-content select="[slot=content]"></ng-content>
     </a>
   `,
   encapsulation: ViewEncapsulation.None,
