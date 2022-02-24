@@ -1,9 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { appDownloadIcon } from './svg/download';
-import { appPhotographIcon } from './svg/photograph';
-import { appSunIcon } from './svg/sun';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import { AppComponent } from './app.component';
 import { CollapsibleNavigationComponent } from './components/collapsible-navigation.component';
@@ -25,6 +22,7 @@ import { BrowserComponent } from './pages/browser/browser.component';
 import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
 import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
 import { MultiplicationComponent } from './pages/multiplication/multiplication.component';
+import { navigationIcons } from './svg/navigation';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -123,7 +121,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     SvgIconsModule.forRoot({
-      icons: [appDownloadIcon, appPhotographIcon, appSunIcon],
+      icons: navigationIcons,
     }),
   ],
   providers: [],
