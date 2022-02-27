@@ -17,7 +17,7 @@ export interface ApiTodoTask {
   template: `
     <div class="relative flex h-screen flex-col">
       <div class="fixed z-10 w-full border-b border-b-slate-200/50">
-        <try-out-spy-content-header>TodoComponent</try-out-spy-content-header>
+        <!-- <try-out-spy-content-header>TodoComponent</try-out-spy-content-header> -->
       </div>
 
       <div class="flex-1 overflow-auto pt-16">

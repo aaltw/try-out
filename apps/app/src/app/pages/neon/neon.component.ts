@@ -2,42 +2,41 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <div class="bg-green-400 flex flex-col h-screen">
+    <div class="flex h-screen flex-col bg-green-400">
       <div class="">
-        <try-out-spy-content-header>Neon</try-out-spy-content-header>
+        <!-- <try-out-spy-content-header>Neon</try-out-spy-content-header> -->
       </div>
 
       <div class="flex-1 overflow-auto">
-        <div class="bg-slate-800 px-24 py-32 rounded-2xl m-8">
+        <div class="m-8 rounded-2xl bg-slate-800 px-24 py-32">
           <div
-            class="mx-auto w-16 h-16 drop-shadow-neon-purple bg-white rounded-full"
+            class="drop-shadow-neon-purple mx-auto h-16 w-16 rounded-full bg-white"
           ></div>
         </div>
 
         <div
-          class="bg-slate-800 px-24 py-32 rounded-2xl m-8 flex items-center justify-center"
+          class="m-8 flex items-center justify-center rounded-2xl bg-slate-800 px-24 py-32"
         >
           <svg
-            class="w-48 h-48"
+            class="h-48 w-48"
             viewBox="0 0 121 44"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-
-          <defs>
-                <filter id="glowie">
-                  <feGaussianBlur
-                    result="coloredBlur"
-                    stdDeviation="1"
-                  ></feGaussianBlur>
-                  <feMerge>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
-                    <feMergeNode in="coloredBlur"></feMergeNode>
-                    <feMergeNode in="SourceGraphic"></feMergeNode>
-                  </feMerge>
-                </filter>
-              </defs>
+            <defs>
+              <filter id="glowie">
+                <feGaussianBlur
+                  result="coloredBlur"
+                  stdDeviation="1"
+                ></feGaussianBlur>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"></feMergeNode>
+                  <feMergeNode in="coloredBlur"></feMergeNode>
+                  <feMergeNode in="coloredBlur"></feMergeNode>
+                  <feMergeNode in="SourceGraphic"></feMergeNode>
+                </feMerge>
+              </filter>
+            </defs>
 
             <mask
               id="a"
@@ -52,7 +51,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
             </mask>
             <g mask="url(#a)">
               <path
-              style=" filter: url(#glowie);"
+                style=" filter: url(#glowie);"
                 d="M30 40h22M3-4l29 49M75-3 46 46M71 40h22M44-5l29 49M118-5 89 44M51 4H29M3 48 32-1"
                 stroke="#fff"
                 stroke-width="9"
@@ -61,7 +60,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
               <mask
                 id="b"
                 style="mask-type:alpha"
-
                 maskUnits="userSpaceOnUse"
                 x="43"
                 y="-3"
@@ -69,7 +67,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
                 height="55"
               >
                 <path
-
                   d="m47 0 29 49"
                   stroke="#fff"
                   stroke-width="9"
@@ -78,7 +75,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
               </mask>
               <g mask="url(#b)">
                 <path
-
                   d="m46 34 28-47"
                   stroke="#000"
                   stroke-opacity=".5"
@@ -96,7 +92,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
                 height="55"
               >
                 <path
-
                   d="m0-9 29 49"
                   stroke="#fff"
                   stroke-width="9"
@@ -105,7 +100,6 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
               </mask>
               <g mask="url(#c)">
                 <path
-
                   d="m-2 68 28-47"
                   stroke="#000"
                   stroke-opacity=".5"
@@ -118,7 +112,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
         </div>
 
         <div
-          class="bg-slate-800 px-24 py-32 rounded-2xl m-8 flex items-center justify-center"
+          class="m-8 flex items-center justify-center rounded-2xl bg-slate-800 px-24 py-32"
         >
           <svg height="300" width="824">
             <g class="svgWrapper" transform="translate(1.000000, 1.000000)">

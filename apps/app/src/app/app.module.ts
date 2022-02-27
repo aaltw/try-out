@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-import { SvgIconsModule } from '@ngneat/svg-icon';
 import { AppComponent } from './app.component';
-import { CollapsibleNavigationComponent } from './components/collapsible-navigation.component';
-import { ContentHeaderComponent } from './components/content-header.component';
-import { NavigationItemComponent } from './components/navigation-item/navigation-item.component';
-import { NavigationComponent } from './components/navigation.component';
 import { BackgroundGlowComponent } from './pages/background-glow/background-glow.component';
 import { ButtonGlowComponent } from './pages/button-glow/button-glow.component';
 import { ImageReflectionComponent } from './pages/image-reflection/image-reflection.component';
@@ -22,20 +17,18 @@ import { BrowserComponent } from './pages/browser/browser.component';
 import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
 import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
 import { MultiplicationComponent } from './pages/multiplication/multiplication.component';
-import { navigationIcons } from './svg/navigation';
 
 const PAGES = [
   BackgroundGlowComponent,
   BrowserComponent,
   ButtonGlowComponent,
   CircleComponent,
-  CollapsibleNavigationComponent,
+
   GlareComponent,
   GradientHoverComponent,
   ImageReflectionComponent,
   ImageShadowComponent,
-  NavigationComponent,
-  NavigationItemComponent,
+
   NeonComponent,
   ShadowComponent,
   SkeletonComponent,
@@ -45,85 +38,89 @@ const PAGES = [
   MultiplicationComponent,
 ];
 
-const COMPONENTS = [ContentHeaderComponent];
+const COMPONENTS: typeof BackgroundGlowComponent[] = [];
 
 const appRoutes: Routes = [
   {
-    path: 'neon',
-    component: NeonComponent,
-  },
-  {
-    path: 'skeleton',
-    component: SkeletonComponent,
-  },
-  {
-    path: 'shadow',
-    component: ShadowComponent,
-  },
-  {
-    path: 'button-glow',
-    component: ButtonGlowComponent,
-  },
-  {
-    path: 'background-glow',
-    component: BackgroundGlowComponent,
-  },
-  {
-    path: 'todo',
-    component: TodoComponent,
-  },
-  {
-    path: 'reflection',
-    component: ImageReflectionComponent,
-  },
-  {
-    path: 'image-shadow',
-    component: ImageShadowComponent,
-  },
-  {
-    path: 'sunset',
-    component: SunsetComponent,
-  },
-  {
-    path: 'glare',
-    component: GlareComponent,
-  },
-  {
-    path: 'circle',
-    component: CircleComponent,
-  },
-  {
-    path: 'browser',
-    component: BrowserComponent,
-  },
-  {
-    path: 'gradient-hover',
-    component: GradientHoverComponent,
-  },
-  {
-    path: 'neumorphic',
-    component: NeumorphicComponent,
-  },
-  {
-    path: 'multiplication',
-    component: MultiplicationComponent,
-  },
-  {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'todo',
+    loadChildren: () =>
+      import('./components/shell/shell.component').then(
+        (m) => m.ShellComponent
+      ),
+
+    children: [
+      {
+        path: 'neon',
+        component: NeonComponent,
+      },
+      {
+        path: 'skeleton',
+        component: SkeletonComponent,
+      },
+      {
+        path: 'shadow',
+        component: ShadowComponent,
+      },
+      {
+        path: 'button-glow',
+        component: ButtonGlowComponent,
+      },
+      {
+        path: 'background-glow',
+        component: BackgroundGlowComponent,
+      },
+      {
+        path: 'todo',
+        component: TodoComponent,
+      },
+      {
+        path: 'reflection',
+        component: ImageReflectionComponent,
+      },
+      {
+        path: 'image-shadow',
+        component: ImageShadowComponent,
+      },
+      {
+        path: 'sunset',
+        component: SunsetComponent,
+      },
+      {
+        path: 'glare',
+        component: GlareComponent,
+      },
+      {
+        path: 'circle',
+        component: CircleComponent,
+      },
+      {
+        path: 'browser',
+        component: BrowserComponent,
+      },
+      {
+        path: 'gradient-hover',
+        component: GradientHoverComponent,
+      },
+      {
+        path: 'neumorphic',
+        component: NeumorphicComponent,
+      },
+      {
+        path: 'multiplication',
+        component: MultiplicationComponent,
+      },
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'todo',
+      },
+    ],
   },
 ];
 
 @NgModule({
   declarations: [AppComponent, ...PAGES, ...COMPONENTS],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(appRoutes),
-    SvgIconsModule.forRoot({
-      icons: navigationIcons,
-    }),
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
 })

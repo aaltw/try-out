@@ -2,30 +2,30 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <div class="flex flex-col flex-1 min-h-0 h-screen pb-6">
-      <try-out-spy-content-header>Button Glow</try-out-spy-content-header>
+    <div class="flex h-screen min-h-0 flex-1 flex-col pb-6">
+      <!-- <try-out-spy-content-header>Button Glow</try-out-spy-content-header> -->
       <div
-        class="mx-auto w-full bg-gray-900 rounded-sm flex flex-col flex-1 pt-6 pb-4 overflow-y-auto shadow-inner"
+        class="mx-auto flex w-full flex-1 flex-col overflow-y-auto rounded-sm bg-gray-900 pt-6 pb-4 shadow-inner"
       >
-        <div class="mx-auto mt-32 relative group">
+        <div class="group relative mx-auto mt-32">
           <div
-            class="absolute inset-0 rounded-xl opacity-50 group-hover:opacity-90 transform-gpu transition-opacity duration-1000 group-hover:duration-200"
+            class="absolute inset-0 transform-gpu rounded-xl opacity-50 transition-opacity duration-1000 group-hover:opacity-90 group-hover:duration-200"
           >
-            <div class="absolute -inset-3 animate-button-wiggle">
+            <div class="animate-button-wiggle absolute -inset-3">
               <div
-                class="absolute bg-pink-700 from-pink-700 to-indigo-700 bg-gradient-to-r inset-0 rounded-xl blur-sm"
+                class="absolute inset-0 rounded-xl bg-pink-700 bg-gradient-to-r from-pink-700 to-indigo-700 blur-sm"
               ></div>
               <div
-                class="absolute bg-pink-700 from-pink-700 to-indigo-700 bg-gradient-to-r inset-0 rounded-xl blur-md"
+                class="absolute inset-0 rounded-xl bg-pink-700 bg-gradient-to-r from-pink-700 to-indigo-700 blur-md"
               ></div>
               <div
-                class="absolute bg-pink-700 from-pink-700 to-indigo-700 bg-gradient-to-r inset-0 rounded-xl blur-xl"
+                class="absolute inset-0 rounded-xl bg-pink-700 bg-gradient-to-r from-pink-700 to-indigo-700 blur-xl"
               ></div>
             </div>
           </div>
 
           <button
-            class="relative px-7 py-4 rounded-xl leading-none flex items-center bg-black text-gray-200 divide-x divide-gray-600"
+            class="relative flex items-center divide-x divide-gray-600 rounded-xl bg-black px-7 py-4 leading-none text-gray-200"
           >
             <span class="flex items-center space-x-3 ">
               <svg
@@ -49,7 +49,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
               <span class="pr-6">Amazing</span>
             </span>
             <span
-              class="pl-6 text-indigo-700 group-hover:text-indigo-500 flex items-center space-x-3 transition-colors duration-1000 group-hover:duration-200"
+              class="flex items-center space-x-3 pl-6 text-indigo-700 transition-colors duration-1000 group-hover:text-indigo-500 group-hover:duration-200"
               ><span>Button</span>
 
               <svg
