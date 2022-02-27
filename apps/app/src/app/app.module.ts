@@ -17,6 +17,10 @@ import { BrowserComponent } from './pages/browser/browser.component';
 import { GradientHoverComponent } from './pages/gradient-hover/gradient-hover.component';
 import { NeumorphicComponent } from './pages/neumorphic/neumorphic.component';
 import { MultiplicationComponent } from './pages/multiplication/multiplication.component';
+import {
+  ShellComponent,
+  ShellComponentModule,
+} from './components/shell/shell.component';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -43,10 +47,11 @@ const COMPONENTS: typeof BackgroundGlowComponent[] = [];
 const appRoutes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./components/shell/shell.component').then(
-        (m) => m.ShellComponent
-      ),
+    component: ShellComponent,
+    // loadChildren: () =>
+    //   import('./components/shell/shell.component').then(
+    //     (m) => m.
+    //   ),
 
     children: [
       {
@@ -120,7 +125,11 @@ const appRoutes: Routes = [
 
 @NgModule({
   declarations: [AppComponent, ...PAGES, ...COMPONENTS],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
+  imports: [
+    BrowserModule,
+    ShellComponentModule,
+    RouterModule.forRoot(appRoutes),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

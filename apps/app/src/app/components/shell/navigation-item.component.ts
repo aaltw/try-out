@@ -5,11 +5,18 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   styles: [
     `
       .link-active {
-        @apply text-white/50 hover:bg-slate-200 hover:text-white/5 dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/25 dark:hover:text-white/100;
+        @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
+        @apply dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/25 dark:hover:text-white/100;
+        @apply after:absolute after:left-0 after:h-6 after:w-1 after:rounded-r-md after:bg-pink-600 after:transition-[height] after:duration-200 after:hover:h-full;
       }
 
       .link-inactive {
-        @apply text-white/50 hover:bg-slate-200 hover:text-white/5 dark:bg-white/0 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white/100;
+        @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
+        @apply dark:bg-white/0 dark:text-white/50 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white/100;
+      }
+
+      .icon-active {
+        @apply text-pink-700;
       }
     `,
   ],
@@ -19,12 +26,15 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
       routerLinkActive
       #rla="routerLinkActive"
       [ngClass]="rla.isActive ? 'link-active' : 'link-inactive'"
-      class="flex w-full items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium transition-colors"
+      class="relative flex w-full items-center space-x-3 rounded-r-full  px-2 py-2 text-sm font-normal transition-all duration-300  "
     >
-      <span class="h-6 w-6 "
-        ><ng-content select="[slot=icon]"></ng-content
-      ></span>
-      <span *ngIf="label">{{ label }}</span>
+      <div
+        class="flex w-5 items-center"
+        [ngClass]="rla.isActive ? 'icon-active' : 'icon-inactive'"
+      >
+        <ng-content select="[slot=icon]"></ng-content>
+      </div>
+      <div class="" *ngIf="label">{{ label }}</div>
       <ng-content select="[slot=content]"></ng-content>
     </a>
   `,
@@ -39,10 +49,3 @@ export class NavigationItemComponent {
 }
 
 //  dark:bg-white/90 dark:text-white/90 dark:hover:bg-white/20 dark:hover:text-white/60
-/**
- *   <a
-    routerLink="/sunset"
-    routerLinkActive="bg-slate-200 text-pink-600 hover:text-pink-700 hover:bg-slate-200 dark:bg-slate-700 dark:hover:text-slate-50 dark:bg-slate-700 dark:hover:text-slate-200"
-    class="group flex w-full items-center space-x-3 rounded-md px-2 py-2 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-200 hover:text-slate-800 dark:text-white/70 dark:hover:bg-white/5 dark:hover:text-white/60"
-  >
- */

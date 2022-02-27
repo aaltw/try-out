@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { SvgIconsModule } from '@ngneat/svg-icon';
 import { navigationIcons } from '../../svg/navigation';
 import { NavigationItemComponent } from './navigation-item.component';
+import { LogoComponent } from './logo.component';
 
 @Component({
   templateUrl: './shell.component.html',
@@ -20,6 +21,14 @@ export class ShellComponent {}
     RouterModule,
     SvgIconsModule.forRoot({
       icons: navigationIcons,
+      sizes: {
+        xs: '10px',
+        sm: '12px',
+        md: '16px',
+        lg: '20px',
+        xl: '25px',
+        xxl: '30px',
+      },
     }),
   ],
   declarations: [
@@ -28,6 +37,7 @@ export class ShellComponent {}
     ContentHeaderComponent,
     CollapsibleNavigationComponent,
     ShellComponent,
+    LogoComponent,
   ],
   exports: [ShellComponent],
 })

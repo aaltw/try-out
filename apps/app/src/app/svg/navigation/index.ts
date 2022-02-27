@@ -1,3 +1,4 @@
+import { appChevronIcon } from './chevron';
 import { appDownloadIcon } from './download';
 import { appNeonIcon } from './neon';
 import { appPhotographIcon } from './photograph';
@@ -6,6 +7,7 @@ import { appSunIcon } from './sun';
 import { appTodoIcon } from './todo';
 import { appXIcon } from './x';
 export const navigationIcons = [
+  appChevronIcon,
   appDownloadIcon,
   appNeonIcon,
   appPhotographIcon,

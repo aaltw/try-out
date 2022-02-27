@@ -2,22 +2,26 @@
 <html lang="en" class="h-screen" translate="no">
   <head>
     <meta charset="utf-8" />
-    <title>App</title>
+    <title>Try out</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="google" content="notranslate">
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png">
+    <meta name="google" content="notranslate" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon.png" />
 
     <script>
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove('dark')
+        document.documentElement.classList.remove('dark');
       }
     </script>
   </head>
-  <body class="h-screen overflow-hidden font-sans antialiased bg-gradient-to-br dark:from-slate-700 dark:to-slate-900 from-slate-50 to-slate-200">
+  <body class="h-screen overflow-hidden font-sans antialiased">
     <try-out-spy-root></try-out-spy-root>
   </body>
 </html>
