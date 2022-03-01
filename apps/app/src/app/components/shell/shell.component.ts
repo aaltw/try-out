@@ -8,6 +8,7 @@ import { SvgIconsModule } from '@ngneat/svg-icon';
 import { navigationIcons } from '../../svg/navigation';
 import { NavigationItemComponent } from './navigation-item.component';
 import { LogoComponent } from './logo.component';
+import { ThemeSwitcherComponent } from './theme-switcher.component';
 
 @Component({
   templateUrl: './shell.component.html',
@@ -38,6 +39,7 @@ export class ShellComponent {}
     CollapsibleNavigationComponent,
     ShellComponent,
     LogoComponent,
+    ThemeSwitcherComponent,
   ],
   exports: [ShellComponent],
 })

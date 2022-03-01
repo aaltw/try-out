@@ -1,9 +1,14 @@
 <div
   class="flex h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-200 text-sm"
 >
-  <div class="flex items-center justify-between bg-slate-50 p-4 shadow-sm">
+  <div
+    class="flex items-center justify-between border-b border-pink-900/5 bg-slate-50 p-4"
+  >
     <try-out-spy-logo></try-out-spy-logo>
-    <div>
+    <div class="flex items-center space-x-4">
+      <div class="relative">
+        <try-out-spy-theme-switcher></try-out-spy-theme-switcher>
+      </div>
       <div
         class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-pink-700 bg-pink-500 text-3xl font-bold uppercase text-white"
       >

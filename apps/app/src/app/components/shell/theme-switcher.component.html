@@ -1,0 +1,46 @@
+<div class="relative">
+  <label
+    class="cursor-pointer text-pink-700"
+    for="theme-switcher-dropdown-checkbox"
+  >
+    <span class="hidden dark:inline">
+      <svg-icon key="moon" size="xl"></svg-icon>
+    </span>
+    <span class="inline dark:hidden">
+      <svg-icon key="sun" size="xl"></svg-icon>
+    </span>
+  </label>
+  <input
+    type="checkbox"
+    id="theme-switcher-dropdown-checkbox"
+    name="theme-switcher-dropdown-checkbox"
+    class="peer sr-only"
+  />
+  <ul
+    class="dark:highlight-white/5 pointer-events-none absolute top-full right-0 z-50 mt-2 w-36 scale-90 overflow-hidden rounded-lg bg-white py-1 text-sm font-semibold text-slate-700 opacity-0 shadow-lg ring-1 ring-slate-900/10 transition duration-200 ease-out peer-checked:pointer-events-auto peer-checked:block peer-checked:scale-100 peer-checked:opacity-100 dark:bg-slate-800 dark:text-slate-300 dark:ring-0"
+  >
+    <li
+      class="flex cursor-pointer items-center py-1 px-2 hover:bg-pink-50 dark:hover:bg-slate-600/60"
+      [ngClass]="{ 'text-pink-600': localStorage.getItem('theme') === 'light' }"
+      (click)="onTheme('light')"
+    >
+      <svg-icon key="sun" size="xl" class="mr-2"></svg-icon> Light
+    </li>
+    <li
+      class="flex cursor-pointer items-center py-1 px-2 hover:bg-pink-50 dark:hover:bg-slate-600/60"
+      [ngClass]="{ 'text-pink-600': localStorage.getItem('theme') === 'dark' }"
+      (click)="onTheme('dark')"
+    >
+      <svg-icon key="moon" size="xl" class="mr-2"></svg-icon>
+      Dark
+    </li>
+    <li
+      class="flex cursor-pointer items-center py-1 px-2 hover:bg-pink-50 dark:hover:bg-slate-600/60"
+      [ngClass]="{ 'text-pink-600': localStorage.getItem('theme') === null }"
+      (click)="onTheme('system')"
+    >
+      <svg-icon key="system" size="xl" class="mr-2"></svg-icon>
+      System
+    </li>
+  </ul>
+</div>
