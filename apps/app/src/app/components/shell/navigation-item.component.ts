@@ -6,13 +6,13 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
     `
       .link-active {
         @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
-        @apply dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/25 dark:hover:text-white/100;
+        @apply dark:text-white/90 dark:hover:bg-white/5 dark:hover:text-white/100;
         @apply after:absolute after:left-0 after:h-6 after:w-1 after:rounded-r-md after:bg-pink-600 after:transition-[height] after:duration-200 after:hover:h-full;
       }
 
       .link-inactive {
         @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
-        @apply dark:bg-white/0 dark:text-white/50 dark:text-white/70 dark:hover:bg-white/10 dark:hover:text-white/100;
+        @apply dark:text-white/90 dark:hover:bg-white/5 dark:hover:text-white/100;
       }
 
       .icon-active {

@@ -5,15 +5,15 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="pt-4">
       <div
-        class="flex cursor-pointer items-center justify-between px-3 text-slate-600 hover:text-slate-600/80"
+        class="flex cursor-pointer items-center justify-between px-3 text-slate-600 text-slate-400/80 hover:text-slate-600/80 hover:text-slate-400"
         (click)="expanded = !expanded"
       >
         <span class="flex py-4 text-xs font-semibold uppercase">
           <ng-content select="[slot=start]"></ng-content>
         </span>
         <span
-          class="transition"
-          [ngClass]="{ 'rotate-90': expanded, 'rotate-180': !expanded }"
+          class="h-5 w-5 origin-center transition-transform duration-200"
+          [ngClass]="{ 'rotate--90': expanded, 'rotate-180': !expanded }"
         >
           <svg-icon key="chevron" size="lg"></svg-icon>
         </span>
