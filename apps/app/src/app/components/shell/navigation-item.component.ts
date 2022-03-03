@@ -50,5 +50,3 @@ export class NavigationItemComponent {
   @Input()
   label = '';
 }
-
-//  dark:bg-white/90 dark:text-white/90 dark:hover:bg-white/20 dark:hover:text-white/60
