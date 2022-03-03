@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/app",
             "index": "apps/app/src/index.html",
@@ -25,7 +27,9 @@
                 "output": "/"
               }
             ],
-            "styles": ["apps/app/src/styles.css"],
+            "styles": [
+              "apps/app/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -90,7 +94,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/app"],
+          "outputs": [
+            "coverage/apps/app"
+          ],
           "options": {
             "jestConfig": "apps/app/jest.config.js",
             "passWithNoTests": true

@@ -2,7 +2,7 @@
   class="flex h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-200 text-sm dark:from-slate-900 dark:to-slate-900"
 >
   <div
-    class="flex items-center justify-between border-b border-pink-900/5 bg-slate-50 p-4 dark:bg-slate-900"
+    class="z-10 flex items-center justify-between border-b border-pink-900/5 bg-slate-50/80 p-4 backdrop-blur-sm dark:bg-slate-900/80"
   >
     <try-out-spy-logo></try-out-spy-logo>
     <div class="flex items-center space-x-4">
@@ -20,7 +20,7 @@
     <div class="w-60 flex-none">
       <try-out-spy-navigation></try-out-spy-navigation>
     </div>
-    <div class="flex-1">
+    <div class="relative -top-20 h-screen flex-1 overflow-auto pt-20">
       <router-outlet></router-outlet>
     </div>
   </div>
