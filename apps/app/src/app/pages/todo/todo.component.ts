@@ -89,10 +89,7 @@ export class TodoComponent {
     } underline" href="https://www.awwwards.com/" target="_blank">https://www.awwwards.com/</a>`,
     `<a class="${
       this.#sampleDecoration
-    } underline" href="https://abduzeedo.com/" target="_blank">https://abduzeedo.com/</a>`,
-    `<a class="${
-      this.#sampleDecoration
-    } underline" href="https://hype4.academy/tools/glassmorphism-generator" target="_blank">https://hype4.academy/tools/glassmorphism-generator</a>`,
+    } underline" href="https://www.uihut.com/web-designs" target="_blank">https://www.uihut.com/web-designs</a>`,
     `<a class="${
       this.#sampleDecoration
     } underline" href="https://www.behance.net/" target="_blank">https://www.behance.net/</a>`,
