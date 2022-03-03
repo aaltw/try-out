@@ -48,11 +48,6 @@ const appRoutes: Routes = [
   {
     path: '',
     component: ShellComponent,
-    // loadChildren: () =>
-    //   import('./components/shell/shell.component').then(
-    //     (m) => m.
-    //   ),
-
     children: [
       {
         path: 'neon',
