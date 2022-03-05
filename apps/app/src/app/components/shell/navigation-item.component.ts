@@ -8,13 +8,13 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
         @apply relative flex w-full items-center space-x-3 rounded-r-full px-2 py-2 text-sm font-normal transition-all duration-300;
       }
       .link--active {
-        @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
+        @apply bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
         @apply dark:text-white/90 dark:hover:bg-white/5 dark:hover:text-white/100;
         @apply after:absolute after:left-0 after:h-6 after:w-1 after:rounded-r-md after:bg-pink-600 after:transition-[height] after:duration-200 after:hover:h-full;
       }
 
       .link--inactive {
-        @apply bg-white bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
+        @apply bg-slate-200/0 text-slate-900/90 hover:bg-slate-200/70 hover:text-slate-900/70;
         @apply dark:text-white/90 dark:hover:bg-white/5 dark:hover:text-white/100;
       }
 

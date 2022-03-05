@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { BackgroundGlowComponent } from './pages/background-glow/background-glow.component';
 import { ButtonGlowComponent } from './pages/button-glow/button-glow.component';
 import { ImageReflectionComponent } from './pages/image-reflection/image-reflection.component';
-import { NeonComponent } from './pages/neon/neon.component';
 import { ShadowComponent } from './pages/shadow/shadow.component';
 import { SkeletonComponent } from './pages/skeleton/skeleton.component';
 import { TodoComponent } from './pages/todo/todo.component';
@@ -33,7 +32,6 @@ const PAGES = [
   ImageReflectionComponent,
   ImageShadowComponent,
 
-  NeonComponent,
   ShadowComponent,
   SkeletonComponent,
   SunsetComponent,
@@ -51,7 +49,10 @@ const appRoutes: Routes = [
     children: [
       {
         path: 'neon',
-        component: NeonComponent,
+        loadChildren: () =>
+          import('./pages/neon/neon.component').then(
+            (m) => m.NeonComponentModule
+          ),
       },
       {
         path: 'skeleton',

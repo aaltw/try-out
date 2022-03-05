@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'try-out-spy-content-header',
@@ -10,4 +10,14 @@ import { Component } from '@angular/core';
     </div>
   `,
 })
-export class ContentHeaderComponent {}
+export class ContentHeaderComponent {
+  #disabledValue = false;
+
+  @Input()
+  get disabled(): boolean {
+    return this.#disabledValue;
+  }
+  set disabled(value: boolean) {
+    this.#disabledValue = value === undefined || value;
+  }
+}
