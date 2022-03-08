@@ -2,9 +2,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <div
-      class="flex h-screen items-center justify-center space-x-8 bg-gray-700"
-    >
+    <div class="flex items-center justify-center space-x-8 pt-8">
       <div
         class="group h-36 w-36 overflow-hidden bg-gray-800 duration-500 hover:scale-105"
       >
