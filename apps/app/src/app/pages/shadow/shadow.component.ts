@@ -2,9 +2,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <!-- <try-out-spy-content-header>Skeleton</try-out-spy-content-header> -->
-
-    <div class="mb-8 flex flex-row justify-center p-4">
+    <div
+      class="grid grid-cols-1 gap-4 p-8 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6"
+    >
       <button
         class="m-4 border border-gray-500/50 bg-gray-500/5 px-8 py-4 shadow-md"
       >
