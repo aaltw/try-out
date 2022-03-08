@@ -2,26 +2,18 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <!-- <try-out-spy-content-header>Skeleton</try-out-spy-content-header> -->
-
-    <div class="p-8">
-      <div
-        class="mx-auto rounded-lg border border-gray-100/50 bg-slate-100 shadow-md"
-      >
+    <div class="grid grid-cols-1 gap-4 p-8 lg:grid-cols-2">
+      <div class="w-full rounded-sm border border-zinc-200/60 bg-slate-200/50">
         <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
-            <div class="h-4 w-3/4 animate-pulse rounded bg-slate-200"></div>
-            <div class="h-4 w-full animate-pulse rounded bg-slate-200"></div>
-            <div class="h-4 w-5/6 animate-pulse rounded bg-slate-200"></div>
+            <div class="h-4 w-3/4 animate-pulse rounded bg-slate-300"></div>
+            <div class="h-4 w-full animate-pulse rounded bg-slate-300"></div>
+            <div class="h-4 w-5/6 animate-pulse rounded bg-slate-300"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
-      <div
-        class="mx-auto rounded-lg border border-gray-100/50 bg-zinc-100 shadow-md"
-      >
+      <div class="w-full rounded-sm border border-zinc-500/10 bg-zinc-100">
         <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
             <div class="h-4 w-3/4 animate-pulse rounded bg-zinc-300"></div>
@@ -30,11 +22,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
       <div
-        class="mx-auto rounded-lg border border-gray-100/50 bg-neutral-100 shadow-md"
+        class="w-full rounded-sm border border-neutral-200/50 bg-neutral-100"
       >
         <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
@@ -44,11 +34,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
       <div
-        class="mx-auto rounded-lg border border-gray-100/50 bg-neutral-100 shadow-md"
+        class="w-full rounded-lg border border-gray-100/50 bg-neutral-100 shadow-md"
       >
         <div class="flex">
           <div class="py-8 pl-8">
