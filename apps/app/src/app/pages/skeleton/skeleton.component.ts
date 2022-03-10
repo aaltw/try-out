@@ -2,71 +2,59 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   template: `
-    <try-out-spy-content-header>Skeleton</try-out-spy-content-header>
-
-    <div class="p-8">
-      <div
-        class="bg-slate-100 mx-auto border shadow-md border-gray-100/50 rounded-lg"
-      >
-        <div class="flex flex-col p-8 space-y-10">
+    <div class="grid grid-cols-1 gap-4 p-8 lg:grid-cols-2">
+      <div class="w-full rounded-sm border border-zinc-200/60 bg-slate-200/50">
+        <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
-            <div class="w-3/4 h-4 bg-slate-200 rounded animate-pulse"></div>
-            <div class="w-full h-4 bg-slate-200 rounded animate-pulse"></div>
-            <div class="w-5/6 h-4 bg-slate-200 rounded animate-pulse"></div>
+            <div class="h-4 w-3/4 animate-pulse rounded bg-slate-300"></div>
+            <div class="h-4 w-full animate-pulse rounded bg-slate-300"></div>
+            <div class="h-4 w-5/6 animate-pulse rounded bg-slate-300"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
-      <div
-        class="bg-zinc-100 mx-auto border shadow-md border-gray-100/50 rounded-lg"
-      >
-        <div class="flex flex-col p-8 space-y-10">
+      <div class="w-full rounded-sm border border-zinc-500/10 bg-zinc-100">
+        <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
-            <div class="w-3/4 h-4 bg-zinc-300 rounded animate-pulse"></div>
-            <div class="w-full h-4 bg-zinc-300 rounded animate-pulse"></div>
-            <div class="w-5/6 h-4 bg-zinc-300 rounded animate-pulse"></div>
+            <div class="h-4 w-3/4 animate-pulse rounded bg-zinc-300"></div>
+            <div class="h-4 w-full animate-pulse rounded bg-zinc-300"></div>
+            <div class="h-4 w-5/6 animate-pulse rounded bg-zinc-300"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
       <div
-        class="bg-neutral-100 mx-auto border shadow-md border-gray-100/50 rounded-lg"
+        class="w-full rounded-sm border border-neutral-200/50 bg-neutral-100"
       >
-        <div class="flex flex-col p-8 space-y-10">
+        <div class="flex flex-col space-y-10 p-8">
           <div class="space-y-2">
-            <div class="w-3/4 h-4 bg-neutral-200 rounded animate-pulse"></div>
-            <div class="w-full h-4 bg-neutral-200 rounded animate-pulse"></div>
-            <div class="w-5/6 h-4 bg-neutral-200 rounded animate-pulse"></div>
+            <div class="h-4 w-3/4 animate-pulse rounded bg-neutral-200"></div>
+            <div class="h-4 w-full animate-pulse rounded bg-neutral-200"></div>
+            <div class="h-4 w-5/6 animate-pulse rounded bg-neutral-200"></div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="p-8">
       <div
-        class="bg-neutral-100 mx-auto border shadow-md border-gray-100/50 rounded-lg"
+        class="w-full rounded-lg border border-gray-100/50 bg-neutral-100 shadow-md"
       >
         <div class="flex">
-          <div class="pl-8 py-8">
-          <div
-                  class="w-16 h-16 bg-neutral-200 rounded-full animate-pulse"
-                ></div>
+          <div class="py-8 pl-8">
+            <div
+              class="h-16 w-16 animate-pulse rounded-full bg-neutral-200"
+            ></div>
           </div>
           <div class="w-full">
-            <div class="flex flex-col p-8 space-y-10">
+            <div class="flex flex-col space-y-10 p-8">
               <div class="space-y-2">
                 <div
-                  class="w-3/4 h-4 bg-neutral-200 rounded animate-pulse"
+                  class="h-4 w-3/4 animate-pulse rounded bg-neutral-200"
                 ></div>
                 <div
-                  class="w-full h-4 bg-neutral-200 rounded animate-pulse"
+                  class="h-4 w-full animate-pulse rounded bg-neutral-200"
                 ></div>
                 <div
-                  class="w-5/6 h-4 bg-neutral-200 rounded animate-pulse"
+                  class="h-4 w-5/6 animate-pulse rounded bg-neutral-200"
                 ></div>
               </div>
             </div>
