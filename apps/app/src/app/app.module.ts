@@ -20,6 +20,7 @@ import {
   ShellComponent,
   ShellComponentModule,
 } from './components/shell/shell.component';
+import { LearnSvgComponent } from './pages/learn-svg/learn-svg.component';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -111,6 +112,10 @@ const appRoutes: Routes = [
         component: MultiplicationComponent,
       },
       {
+        path: 'learn-svg',
+        component: LearnSvgComponent,
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'todo',
@@ -120,7 +125,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...PAGES, ...COMPONENTS],
+  declarations: [AppComponent, ...PAGES, ...COMPONENTS, LearnSvgComponent],
   imports: [
     BrowserModule,
     ShellComponentModule,
