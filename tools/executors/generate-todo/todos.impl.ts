@@ -39,17 +39,23 @@ export default async function todosExecutor(
       (value: { data: { access_token: string } }) => value.data.access_token
     );
 
-  await fetch(`${options.endpoint}/items/todos`, {
-    method: 'GET',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${token}`,
-    },
-  })
+  await fetch(
+    `${options.endpoint}/items/todos?filter[active][_eq]=true&filter[done][_eq]=false&filter[visible][_eq]=true`,
+    {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  )
     .then((response) => response.json())
     .then((response: { data: ApiTodoTask[] }) => {
-      fs.writeFileSync('apps/app/src/assets/todos.json', JSON.stringify(response));
+      fs.writeFileSync(
+        'apps/app/src/assets/todos.json',
+        JSON.stringify(response)
+      );
     });
 
   const success = true;

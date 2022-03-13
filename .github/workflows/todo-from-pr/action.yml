@@ -1,6 +1,0 @@
-name: 'Todo and PR Action'
-description: 'Adds pull request with a new todo list'
-
-runs:
-  using: 'node16'
-  main: 'index.js'
