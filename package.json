@@ -39,7 +39,7 @@
     "@ngneat/svg-generator": "^4.0.0",
     "@ngneat/svg-icon": "^4.1.0",
     "@types/node": "17.0.21",
-    "@typescript-eslint/eslint-plugin": "5.14.0",
+    "@typescript-eslint/eslint-plugin": "5.15.0",
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-cypress": "^2.10.3",
