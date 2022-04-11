@@ -27,6 +27,8 @@ export class MultiplicationComponent {
   #a = 0;
   #b = 0;
 
+  #timerRunning = false;
+
   constructor() {
     this.#createMultiplication();
   }
@@ -40,13 +42,27 @@ export class MultiplicationComponent {
   }
 
   check(event: Event): void {
+    if (this.#timerRunning) {
+      return;
+    }
+
     const correct = +(event.target as HTMLInputElement).value === this.#answer;
     this.result$.next(correct);
+
+    if (!correct) {
+      return;
+    }
 
     let counter = 10;
     timer(0, 1000) //Initial delay 1 seconds and interval countdown also 1 second
       .pipe(
+        tap(() => (this.#timerRunning = true)),
+
+        // Run timer while counter > 0
         takeWhile(() => counter > 0),
+
+        // Also, just run when timer is running
+        takeWhile(() => this.#timerRunning),
         tap(() => counter--)
       )
       .subscribe({
@@ -56,6 +72,7 @@ export class MultiplicationComponent {
           this.result$.next(null);
           (event.target as HTMLInputElement).value = '';
           (event.target as HTMLInputElement).focus();
+          this.#timerRunning = false;
         },
       });
   }

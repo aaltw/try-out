@@ -1,0 +1,27 @@
+<div
+  class="flex h-screen flex-col bg-gradient-to-br from-slate-50 to-slate-200 text-sm dark:from-slate-900 dark:to-slate-900"
+>
+  <div
+    class="z-10 flex items-center justify-between border-b border-pink-900/5 bg-slate-50/80 p-4 backdrop-blur-sm dark:bg-slate-900/80"
+  >
+    <try-out-spy-logo></try-out-spy-logo>
+    <div class="flex items-center space-x-4">
+      <div class="relative">
+        <try-out-spy-theme-switcher></try-out-spy-theme-switcher>
+      </div>
+      <div
+        class="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full border-2 border-pink-700 bg-pink-500 text-3xl font-bold uppercase text-white"
+      >
+        TO
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-1 flex-row">
+    <div class="w-60 flex-none">
+      <try-out-spy-navigation></try-out-spy-navigation>
+    </div>
+    <div class="relative -top-20 h-screen flex-1 overflow-auto pt-20">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
