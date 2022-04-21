@@ -21,6 +21,7 @@ import {
   ShellComponentModule,
 } from './components/shell/shell.component';
 import { LearnSvgComponent } from './pages/learn-svg/learn-svg.component';
+import { BottomNavigationComponent } from './pages/bottom-navigation/bottom-navigation.component';
 
 const PAGES = [
   BackgroundGlowComponent,
@@ -116,6 +117,10 @@ const appRoutes: Routes = [
         component: LearnSvgComponent,
       },
       {
+        path: 'bottom-navigation',
+        component: BottomNavigationComponent,
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'todo',
@@ -125,7 +130,13 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, ...PAGES, ...COMPONENTS, LearnSvgComponent],
+  declarations: [
+    AppComponent,
+    ...PAGES,
+    ...COMPONENTS,
+    LearnSvgComponent,
+    BottomNavigationComponent,
+  ],
   imports: [
     BrowserModule,
     ShellComponentModule,
