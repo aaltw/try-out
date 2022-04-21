@@ -1,0 +1,26 @@
+name: 'Todo and PR Action'
+description: 'Fetches todo '
+
+inputs:
+  api-endpoint:
+    description: 'Endpoint'
+    required: true
+    default: ''
+
+  api-username:
+    description: 'Username'
+    required: true
+    default: ''
+
+  api-password:
+    description: 'Password'
+    required: true
+    default: ''
+
+outputs:
+  todos:
+    description: 'A json object string with todos'
+
+runs:
+  using: 'node12'
+  main: 'index.js'
