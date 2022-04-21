@@ -1,10 +1,10 @@
-name: Call workflow
+name: Update todo's workflow
 
 on:
   workflow_dispatch:
 
 jobs:
-  hello_world_job:
+  fetch_todos_job:
     runs-on: ubuntu-latest
     name: Create a PR with new todo's
     steps:
@@ -32,3 +32,7 @@ jobs:
         if: ${{ steps.todo.outputs.todos }}
         with:
           commit-message: 'chore: update todos'
+          labels: |
+            chore
+            automated
+            todo
