@@ -20,7 +20,6 @@ jobs:
       - name: 🔨 Build Project
         run: |
           npm ci
-          npx nx run app:generate-todo --username=${{ secrets.CMS_USERNAME }} --pwd=${{ secrets.CMS_PASSWORD }} --endpoint=${{ secrets.CMS_ENDPOINT }}
           npx nx build
 
       - name: 📂 Sync files
@@ -31,7 +30,7 @@ jobs:
           port: 22
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote_folder: ./subdomains/try-out/
+          remote_folder: subdomains/try-out/
           local_folder: dist/apps/app/
           include: '["*", "**/*", ".htaccess"]'
           cleanup: true
