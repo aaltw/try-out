@@ -18,9 +18,9 @@ jobs:
         id: todo
         uses: ./.github/workflows/fetch-todos
         with:
-          api-endpoint: ${{ API_ENDPOINT }}
-          api-username: ${{ API_USERNAME }}
-          api-password: ${{ API_PASSWORD }}
+          api-endpoint: ${{ secrets.API_ENDPOINT }}
+          api-username: ${{ secrets.API_USERNAME }}
+          api-password: ${{ secrets.API_PASSWORD }}
 
       - name: Update todo's file
         run: |
