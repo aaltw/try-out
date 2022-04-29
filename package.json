@@ -64,7 +64,7 @@
     "ts-jest": "27.1.4",
     "lint-staged": "^12.4.0",
     "typescript": "4.6.3",
-    "nx": "13.10.3"
+    "nx": "14.0.5"
   },
   "svgGenerator": {
     "outputPath": "apps/app/src/app/svg",
