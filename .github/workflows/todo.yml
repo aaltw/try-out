@@ -1,0 +1,43 @@
+name: Update todo's workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch_todos_job:
+    runs-on: ubuntu-latest
+    name: Create a PR with new todo's
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: npm install
+        run: |
+          npm --prefix ./.github/workflows/fetch-todos install ./.github/workflows/fetch-todos
+
+      - name: Fetch todo's
+        id: todo
+        uses: ./.github/workflows/fetch-todos
+        with:
+          api-endpoint: ${{ secrets.API_ENDPOINT }}
+          api-username: ${{ secrets.API_USERNAME }}
+          api-password: ${{ secrets.API_PASSWORD }}
+
+      - name: Update todo's file
+        run: |
+          echo ${{ steps.todo.outputs.todos }} > ./apps/app/src/assets/todos.json
+
+      - name: Create Pull Request
+        id: cpr
+        uses: peter-evans/create-pull-request@v4
+        if: ${{ steps.todo.outputs.todos }}
+        with:
+          commit-message: 'chore: update todos'
+          labels: |
+            chore
+            automated
+            todo
+          body: |
+            Todo's:
+            ${{ steps.todo.outputs.todos }}
+          branch: example-todo
+          delete-branch: true
