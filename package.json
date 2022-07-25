@@ -61,7 +61,7 @@
     "husky": "^8.0.1",
     "jest": "27.5.1",
     "jest-preset-angular": "11.1.2",
-    "node-fetch": "^3.2.4",
+    "node-fetch": "^3.2.9",
     "prettier": "2.6.2",
     "cypress": "^9.6.1",
     "prettier-plugin-tailwindcss": "^0.1.11",
