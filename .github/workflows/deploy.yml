@@ -23,7 +23,7 @@ jobs:
           npx nx build
 
       - name: 📂 Sync files
-        uses: sand4rt/ftp-deployer@v1.4
+        uses: sand4rt/ftp-deployer@v1.5
         with:
           sftp: true
           host: ${{ secrets.FTP_SERVER }}
