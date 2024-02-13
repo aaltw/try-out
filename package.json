@@ -15,7 +15,7 @@
   "dependencies": {
     "rxjs": "~7.5.5",
     "@nrwl/angular": "14.1.7",
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.17",
     "@angular/animations": "13.3.3",
     "@angular/common": "13.3.3",
     "@angular/compiler": "13.3.3",
